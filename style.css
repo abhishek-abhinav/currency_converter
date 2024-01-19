@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("https://img.freepik.com/premium-vector/pi-day-seamless-pattern-with-mathematical-constants-baked-pie-template-hand-drawn-illustration_2175-12164.jpg");
+}
+
+main {
+    min-height: 70vh;
+    gap: 1rem;
+    padding: 3rem;
+    border: 2px solid;
+    background-color: #bbdff27d;
+    border-radius: 25px;
+    backdrop-filter: blur(3px);
+}
+
+.title {
+    font-size: 11px;
+    color: aliceblue;
+    background-color: #2364AA;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.title h1 {
+    color: yellow;
+}
+
+form {
+    gap: 1rem;
+}
+
+#amount {
+    /* padding-left: 3px; */
+    text-align: center;
+}
+
+.dropdowns {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+i {
+    margin-top: 1rem;
+}
+
+.box {
+    flex-direction: row;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem;
+}
+
+.box img {
+    width: 1.4rem;
+}
+
+#from,
+#to {
+    border: unset;
+    cursor: pointer;
+}
+
+.msg {
+    text-align: center;
+}
+
+button {
+    background-color: #184677;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width:600px) {
+    main {
+        width: 70vw;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    form {
+        width: 100%;
+        gap: 1.5rem;
+    }
+    form> label{
+        /* width: 100%; */
+        font-size: 2rem;
+    }
+    input{
+        font-size: 2rem;
+        margin-top: -0.75rem;
+    }
+
+    .dropdowns{
+        width: 100%;
+        height: 5rem;
+    }
+    .dropdown-from, .dropdown-to{
+        height: 100%;
+    }
+    .dropdowns label{
+        font-size: 1.25rem;
+    }
+    .box{
+        height: 50%;
+        width: 7rem;
+    }
+    .box img{
+        width: 2rem;
+    }
+    #from, #to{
+        height: 80%;
+        width: 4rem;
+        font-size: 1.25rem;
+    
+    }
+    .msg{
+        font-size: 1.5rem;
+    }
+    button{
+        font-size: 1.25rem;
+        padding: 0.75rem;
+    }
+}
