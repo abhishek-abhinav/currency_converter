@@ -208,11 +208,11 @@ for (const currCode in countryList) {
 }) ();
 
 
-
+let updatedCurr;
 //Updating Country Icon
 selects.forEach(select => {
     select.addEventListener("change", (event) => {
-        let updatedCurr = select.options[select.selectedIndex].value;
+        updatedCurr = select.options[select.selectedIndex].value;
         let newScr = `https://flagsapi.com/${countryList[updatedCurr]}/flat/64.png`;
         select.previousElementSibling.src = newScr;
     })
@@ -237,3 +237,18 @@ let calcRes = async () => {
     // console.log(output);
     msg.innerHTML = `${input} ${fromValue} = ${output} ${toValue}`
 }
+
+
+//Exchange values
+let exchange = document.querySelector(".exchange");
+exchange.addEventListener("click", (e)=>{
+    let temp = selects[0].value;
+    let tempSrc = selects[0].previousElementSibling.src;
+    // console.log(selects[0].previousElementSibling.src);
+    selects[0].value = selects[1].value;
+    selects[0].previousElementSibling.src = selects[1].previousElementSibling.src;
+    // console.log(selects[0].src);
+    selects[1].value = temp;
+    selects[1].previousElementSibling.src = tempSrc;
+    
+})
